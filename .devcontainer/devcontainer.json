@@ -1,0 +1,26 @@
+{
+  "name": "ESP-IDF Dev Container",
+  "dockerComposeFile": [
+    "../compose.yml"
+  ],
+  "service": "espidf",
+  "workspaceFolder": "/workspace",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "espressif.esp-idf-extension",
+        "ms-vscode.cpptools"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  "containerEnv": {
+    "IDF_PATH": "/opt/esp/idf"
+  },
+
+  "postCreateCommand": "bash -lc '. /opt/esp/idf/export.sh && idf.py --version'"
+}

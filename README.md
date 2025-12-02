@@ -4,7 +4,9 @@
 2. F1 key Dev Containers - Reopen in Container
 自動でコンテナが立ち上がり、ESP-IDF 拡張もインストールされる
 
-ターミナルで確認：
+3. 左ペインの空白を右クリックで workspaceに追加
+
+ ターミナルで確認：
 
 idf.py --version
 idf.py build

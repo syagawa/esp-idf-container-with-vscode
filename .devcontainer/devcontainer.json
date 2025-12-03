@@ -13,7 +13,12 @@
         "ms-vscode.cpptools"
       ],
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "idf.showOnboardingOnInit": false,
+        "idf.toolsPath": "/opt/esp",
+        "idf.espIdfPath": "/opt/esp/idf",
+        "idf.pythonBinPath": "/opt/esp/python_env/idf4.2_py3.6_env/bin/python"
       }
     }
   },
@@ -21,6 +26,9 @@
   "containerEnv": {
     "IDF_PATH": "/opt/esp/idf"
   },
+  "userEnvProbe": "loginInteractiveShell"
 
-  "postCreateCommand": "bash -lc '. /opt/esp/idf/export.sh && idf.py --version'"
+  // "postCreateCommand": "bash -lc '. /opt/esp/idf/export.sh && idf.py --version'"
+  // "postCreateCommand": "/bin/bash -c 'source /opt/esp/idf/export.sh && idf.py --version'"
+
 }
